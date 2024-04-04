@@ -1,4 +1,4 @@
-import { Search } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, MoreHorizontal, Search } from 'lucide-react'
 
 export function AttendeeList(){
 
@@ -30,7 +30,7 @@ export function AttendeeList(){
                             Array.from({length: 6}).map((_, index) => {
                                 return (
                                     <tr key={index} className='px-4 py-3 border-b border-white/10'> 
-                                        <td className='px-4 py-3 text-left text-zinc-300'><input type="checkbox" /></td>
+                                        <td style={{width: 48}} className='px-4 py-3 text-left text-zinc-300'><input type="checkbox" /></td>
                                         <td className='px-4 py-3 text-left text-zinc-300'>87234</td>
                                         <td className='px-4 py-3 text-left text-zinc-300 flex flex-col gap-1'>
                                             <span className='text-white font-semibold text-sm'>João Victor de Lima Oliveira</span>
@@ -38,7 +38,11 @@ export function AttendeeList(){
                                         </td>
                                         <td className='px-4 py-3 text-left text-zinc-300'>7 dias atrás</td>
                                         <td className='px-4 py-3 text-left text-zinc-300'>3 dias atrás</td>
-                                        <td className='px-4 py-3 text-left text-zinc-300'></td>
+                                        <td style={{width: 64}} className='px-4 py-3 text-left text-zinc-300'>
+                                            <button className='bg-black p-1.5 rounded-md border border-white/10'>
+                                                <MoreHorizontal />
+                                            </button>
+                                        </td>
                                     </tr>
                                 )
                             })
@@ -47,7 +51,28 @@ export function AttendeeList(){
                     <tfoot>
                         <tr className='px-4 py-3 text-zinc-300'>
                             <td className='px-4 py-3 text-sm' colSpan={3}>Mostrando 10 de 228 itens</td>
-                            <td className='px-4 py-3 text-right text-sm' colSpan={3}>Página 1 de 11</td>
+                            <td className='px-4 py-3 text-right text-sm' colSpan={3}>
+                                
+                                <div className='inline-flex gap-8 items-center'>
+
+                                    <span>Página 1 de 11</span>
+                                    
+                                    <div className='flex gap-1.5'>
+                                        <button className='bg-white/10 p-1.5 rounded-md border border-white/10'>
+                                            <ChevronsLeft />
+                                        </button>
+                                        <button className='bg-white/10 p-1.5 rounded-md border border-white/10'>
+                                            <ChevronLeft />
+                                        </button>
+                                        <button className='bg-white/10 p-1.5 rounded-md border border-white/10'>
+                                            <ChevronRight />
+                                        </button>
+                                        <button className='bg-white/10 p-1.5 rounded-md border border-white/10'>
+                                            <ChevronsRight />
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
