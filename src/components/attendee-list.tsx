@@ -9,7 +9,7 @@ export function AttendeeList(){
 
                 <div className='flex items-center gap-3 w-72 border border-white/10 py-1.5 px-3 rounded-lg'>
                     <Search className='size-4 text-emerald-300' />
-                    <input type="text" placeholder="Buscar participante..." className='bg-transparent outline-none' />
+                    <input type="text" placeholder="Buscar participante..." className='bg-transparent outline-none h-auto p-0 border-0' />
                 </div>
             </div>
 
@@ -17,7 +17,7 @@ export function AttendeeList(){
                 <table className='w-full'>
                     <thead>
                         <tr className='px-4 py-3 border-b border-white/10' >
-                            <th className='font-semibold text-white text-left text-sm px-4 py-3'><input type="checkbox" /></th>
+                            <th className='font-semibold text-white text-left text-sm px-4 py-3'><input className='rounded bg-black/20 border border-white/10 size-4'  type="checkbox" /></th>
                             <th className='font-semibold text-white text-left text-sm px-4 py-3'>Código</th>
                             <th className='font-semibold text-white text-left text-sm px-4 py-3'>Participante</th>
                             <th className='font-semibold text-white text-left text-sm px-4 py-3'>Data da inscrição</th>
@@ -30,7 +30,7 @@ export function AttendeeList(){
                             Array.from({length: 6}).map((_, index) => {
                                 return (
                                     <tr key={index} className='px-4 py-3 border-b border-white/10'> 
-                                        <td style={{width: 48}} className='px-4 py-3 text-left text-zinc-300'><input type="checkbox" /></td>
+                                        <td style={{width: 48}} className='px-4 py-3 text-left text-zinc-300'><input className='rounded bg-black/20 border border-white/10 size-4' type="checkbox" /></td>
                                         <td className='px-4 py-3 text-left text-zinc-300'>87234</td>
                                         <td className='px-4 py-3 text-left text-zinc-300 flex flex-col gap-1'>
                                             <span className='text-white font-semibold text-sm'>João Victor de Lima Oliveira</span>
